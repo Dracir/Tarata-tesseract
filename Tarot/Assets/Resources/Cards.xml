@@ -1,0 +1,22 @@
+<cards>
+	<cardGroup groupName = "Fantastic">
+		<card id="1">
+			<name>The Path</name>
+			<description>Life is full of adventures. Those adventures can be shadowed by conflict. The dragon represent also wisdom, this adventure might be a good opportunity to grow. The goal might be hidden by something but you just need to fellow the path or your own path to get closer to end.</description>
+			<textureBack textureFile="cards" index="16" />
+			<textureFront textureFile="cards" index="1" />
+		</card>
+		<card id="2">
+			<name>The Bridge</name>
+			<description></description>
+			<textureBack textureFile="cards" index="16" />
+			<textureFront textureFile="cards" index="2" />
+		</card>
+		<card id="4">
+			<name>The Elements</name>
+			<description></description>
+			<textureBack textureFile="cards" index="16" />
+			<textureFront textureFile="cards" index="2" />
+		</card>
+	</cardGroup>
+</cards>

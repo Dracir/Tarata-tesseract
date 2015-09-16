@@ -6,6 +6,8 @@ public class Card : MonoBehaviour
 {
 
     public string name;
+    public string description;
+    public string suit;
 
     [Button("Flip", "Flip")]
     public bool flip;

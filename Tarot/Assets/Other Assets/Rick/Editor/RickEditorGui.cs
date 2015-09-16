@@ -3,6 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using Magicolo;
 using UnityEngine.UI;
+using System;
 
 namespace RickEditor.Editor{
 	
@@ -13,7 +14,7 @@ namespace RickEditor.Editor{
 		
 		public static string rootFolder = Application.dataPath.Substring(0, Application.dataPath.Length - 6);
 		public static string assetFolder = Application.dataPath;
-		public static string resourcesFolder = Application.dataPath + "/Resources";
+		public static string resourcesFolder = Application.dataPath + "/Resources/";
 		
 		static GUIStyle makePathButtonStyle() {
 			GUIStyle buttonStyle = new GUIStyle("TL SelectionButton");
@@ -22,9 +23,10 @@ namespace RickEditor.Editor{
 			buttonStyle.normal.textColor = EditorStyles.label.normal.textColor;*/
 			return buttonStyle;
 		}
-		
-		
-		public static void Label(GUIContent prefixLabel, GUIContent label){
+
+        
+
+        public static void Label(GUIContent prefixLabel, GUIContent label){
 			Rect rect = makePrefixLabelAndReturnRect(prefixLabel);
 			
 			EditorGUI.LabelField(rect, label);
@@ -33,12 +35,16 @@ namespace RickEditor.Editor{
 		public static void Label(string prefixLabel, string label){
 			Label(new GUIContent(prefixLabel), new GUIContent(label));
 		}
-		
-		
-		public static Object ObjectField(string prefixLabel, Object obj, System.Type objType, bool allowSceneObjects){
+
+        public static GameObject GamebjectField(string label, GameObject gameObject, bool allowSceneObjects = true)
+        {
+            return (GameObject) ObjectField(label, gameObject, typeof(GameObject), allowSceneObjects);
+        }
+
+        public static UnityEngine.Object ObjectField(string prefixLabel, UnityEngine.Object obj, System.Type objType, bool allowSceneObjects){
 			Rect rect = getBaseRect();
 			rect = EditorGUI.PrefixLabel(rect, new GUIContent(prefixLabel), prefixLabelStyle);
-			Object selectedObject = EditorGUI.ObjectField(rect, obj, objType, allowSceneObjects);
+            UnityEngine.Object selectedObject = EditorGUI.ObjectField(rect, obj, objType, allowSceneObjects);
 			return selectedObject;
 		}
 		
