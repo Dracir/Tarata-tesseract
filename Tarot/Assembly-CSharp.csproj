@@ -189,11 +189,18 @@
      <Compile Include="Assets\Other Assets\Rick\Utils\TagSetter.cs" />
      <Compile Include="Assets\Other Assets\Rick\Utils\TextureUtils.cs" />
      <Compile Include="Assets\Scripts\Card.cs" />
+     <None Include="Assets\Resources\Cards\Rcard\Data.xml" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Programs/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Programs/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Networking">
  <HintPath>C:/Programs/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Programs/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="Mono.Cecil">
  <HintPath>C:/Programs/Unity/Editor/Data/Managed/Mono.Cecil.dll</HintPath>

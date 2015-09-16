@@ -87,6 +87,10 @@
      <Compile Include="Assets\Other Assets\Rick\RickTools\MapLoader\Editor\MapWindowBase.cs" />
      <Compile Include="Assets\Other Assets\Rick\RickTools\PrefabRotator\Editor\PrefabRotatorWindow.cs" />
      <Compile Include="Assets\Other Assets\Rick\RickTools\ProjectInit\Editor\ProjectInitWindow.cs" />
+     <None Include="Assets\Resources\Cards\Rcard\Data.xml" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/Programs/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Programs/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -101,6 +105,9 @@
  </Reference>
  <Reference Include="UnityEditor.Networking">
  <HintPath>C:/Programs/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/Programs/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Programs/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
