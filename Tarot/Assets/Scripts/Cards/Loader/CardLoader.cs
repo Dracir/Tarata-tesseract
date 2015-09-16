@@ -9,9 +9,11 @@ namespace RickTools.Cards
     public class CardLoader
     {
         public Transform root;
+        public string folderPath;
 
-        public CardLoader(GameObject root) {
+        public CardLoader(GameObject root, string folderPath) {
             this.root = root.transform;
+            this.folderPath = folderPath;
         }
 
         public void load(XmlDocument doc) {
@@ -42,7 +44,7 @@ namespace RickTools.Cards
             GameObject cardRoot = GameObjectExtend.createGameObject(name, parent);
             Card card = cardRoot.AddComponent<Card>();
             card.description = descripton;
-            card.name = name;
+            card.cardName = name;
             card.front = createCardTextureGame("Front", cardRoot.transform, front);
             card.front = createCardTextureGame("Back", cardRoot.transform, back);
         }
@@ -56,10 +58,9 @@ namespace RickTools.Cards
         }
 
         private Sprite findSpriteForm(XmlNode textureNode) {
-            string file = textureNode.Attributes.GetNamedItem("textureFile").InnerText;
-            string index = textureNode.Attributes.GetNamedItem("index").InnerText;
-            string fileName = file + "_" + index;
-            return Resources.Load<Sprite>(fileName);
+            string fileName = textureNode.Attributes.GetNamedItem("textureFile").InnerText;
+            int index = Int32.Parse(textureNode.Attributes.GetNamedItem("index").InnerText);
+            return ResourcesUtils.loadSprite(folderPath, fileName, index);
         }
     }
 }

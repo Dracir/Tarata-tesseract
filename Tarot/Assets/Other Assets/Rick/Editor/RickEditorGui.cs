@@ -82,7 +82,8 @@ namespace RickEditor.Editor{
 			
 			rect = EditorGUI.PrefixLabel(rect, label, prefixLabelStyle);
 			string returnPath = FilePathButton(rect, path, relativeTo, extension);
-			if(!hasFilePathFlag(options, FilePathOptions.KEEP_EXTENTION)){
+			if(!hasFilePathFlag(options, FilePathOptions.KEEP_EXTENTION) && returnPath != null)
+            {
 				returnPath = returnPath.Replace("." + extension, "");
 			}
 			

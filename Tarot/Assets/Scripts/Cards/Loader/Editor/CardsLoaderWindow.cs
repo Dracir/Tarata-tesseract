@@ -28,7 +28,8 @@ namespace RickTools.Cards
             root = RickEditorGUI.GamebjectField("Root",root);
             if (RickEditorGUI.Button(new GUIContent("Load"))) {
                 XmlDocument xmldoc = XmlUtils.load(pathChosen);
-                CardLoader loader = new CardLoader(root);
+                string pathFolder = Path.GetDirectoryName(pathChosen);
+                CardLoader loader = new CardLoader(root, pathFolder);
                 loader.load(xmldoc);
             }
         }

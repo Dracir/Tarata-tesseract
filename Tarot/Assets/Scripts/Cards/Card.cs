@@ -5,7 +5,7 @@ using Magicolo;
 public class Card : MonoBehaviour
 {
 
-    public string name;
+    public string cardName;
     public string description;
     public string suit;
 
