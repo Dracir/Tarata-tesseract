@@ -24,7 +24,6 @@ namespace RickEditor.Editor{
 			return buttonStyle;
 		}
 
-        
 
         public static void Label(GUIContent prefixLabel, GUIContent label){
 			Rect rect = makePrefixLabelAndReturnRect(prefixLabel);
@@ -35,6 +34,21 @@ namespace RickEditor.Editor{
 		public static void Label(string prefixLabel, string label){
 			Label(new GUIContent(prefixLabel), new GUIContent(label));
 		}
+
+
+
+        public static bool CheckBox(string prefixLabel, bool value)
+        {
+            return CheckBox(new GUIContent(prefixLabel), value);
+        }
+        
+        public static bool CheckBox(GUIContent prefix, bool value)
+        {
+            Rect rect = getBaseRect();
+            rect = EditorGUI.PrefixLabel(rect, prefix, prefixLabelStyle);
+            return EditorGUI.Toggle(rect, value);
+        }
+
 
         public static GameObject GamebjectField(string label, GameObject gameObject, bool allowSceneObjects = true)
         {

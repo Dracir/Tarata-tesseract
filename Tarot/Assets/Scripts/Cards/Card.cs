@@ -7,7 +7,15 @@ public class Card : MonoBehaviour
 
     public string cardName;
     public string description;
-    public string suit;
+    public string cardGroupName;
+    public int RenderingOrder {
+        set {
+            foreach (var sprite in GetComponentsInChildren<SpriteRenderer>())
+            {
+                sprite.sortingOrder = value;
+            }
+        }
+    }
 
     [Button("Flip", "Flip")]
     public bool flip;
